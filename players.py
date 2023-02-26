@@ -28,7 +28,7 @@ class Player:
     def CalculateScore(self):
         self.score = 0
         numOfAces = 0
-        
+
         for tuple in self.cards:
             if tuple[0] >= 10:
                 self.score += 10
@@ -61,8 +61,7 @@ class Player:
     def DrawPlayerCards(self):
         x = 0
         for card in self.cards:
-            self.game.playingScreen.DrawCard(
-                card[0], card[1], 25 + x * 2179 / 26, self.game.windowHeight - 1216 / 5 - 25)
+            self.game.playingScreen.DrawCard(card[0], card[1], 25 + x * 2179 / 26, self.game.windowHeight - 1216 / 5 - 25)
             x += 1
 
     def CompareScores(self):
@@ -110,12 +109,10 @@ class Dealer(Player):
     def DrawPlayerCards(self):
         x = 0
         for card in self.cards:
-            self.game.playingScreen.DrawCard(
-                card[0], card[1], 25 + x * 2179 / 26, 25)
+            self.game.playingScreen.DrawCard(card[0], card[1], 25 + x * 2179 / 26, 25)
             x += 1
         if not self.isPlaying:
-            self.game.window.blit(
-                self.game.playingScreen.hiddenCard, (25 + 2179 / 26, 25))
+            self.game.window.blit(self.game.playingScreen.hiddenCard, (25 + 2179 / 26, 25))
 
     def CheckBust(self):
         if self.score > 21:
