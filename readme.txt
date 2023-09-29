@@ -1,1 +1,1 @@
-I DO NOT OWN ANY OF THE ASSETS USED.
+I do not own any of the assets used.
